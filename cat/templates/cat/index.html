@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>kisik</title>
+    {% extends "cat/base.html" %}
 </head>
 <body>
+{% block content %}
 <p>Hello, stranger! Welcome to the KISIK!</p>
-<p>Kisik is the place where you can share your experience with our little fluffy friends - cats.</p>
+<p>Kisik is the place where you can share your love to our little fluffy friends - cats.</p>
 <p>Feel free to write everything you want to tell us about them!</p>
+{% endblock content %}
 </body>
 </html>
