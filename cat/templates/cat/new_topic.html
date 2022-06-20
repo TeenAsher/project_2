@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends "cat/base.html" %}
+</head>
+<body>
+{% block content %}
+  <p>Please, enter the name of the new topic:</p>
+
+  <form action="{% url 'cat:new_topic' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button name="submit">Add topic</button>
+  </form>
+
+{% endblock content %}
+</body>
+</html>
