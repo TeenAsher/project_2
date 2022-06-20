@@ -8,4 +8,6 @@ app_name = 'cat'
 urlpatterns = [
     # Home page
     path('', views.index, name='index'),
+    # Path that shows all topics
+    path('topics/', views.topics, name='topics')
 ]
