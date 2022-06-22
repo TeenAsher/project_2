@@ -70,5 +70,5 @@ def new_entry(request, topic_id):
             return redirect('cat:topic', topic_id=topic_id)
 
     # Display a blank or invalid form
-    context = {'topic': topic, 'form': 'form'}
+    context = {'topic': topic, 'form': form}
     return render(request, 'cat/new_entry.html', context)

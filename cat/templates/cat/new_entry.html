@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends "cat/base.html" %}
+</head>
+<body>
+{% block content %}
+
+  <p><a href="{% url 'cat:topic' topic.id %}">{{ topic }}</a></p>
+
+  <p>Please, write the new entry:</p>
+
+  <form action="{% url 'cat:new_entry' topic.id %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button name="submit">Save entry</button>
+  </form>
+
+{% endblock content %}
+</body>
+</html>
